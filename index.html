@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebView Тест Ссылок</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; line-height: 2; }
+        a { display: block; margin-bottom: 15px; padding: 10px; background: #f0f0f0; text-decoration: none; color: #333; border-radius: 5px; text-align: center;}
+    </style>
+</head>
+<body>
+    <h3>1. Веб-переходы</h3>
+    <a href="https://habr.com" target="_self">Обычная ссылка (в этом же окне)</a>
+    <a href="https://google.com" target="_blank">Ссылка с target="_blank" (нужен WebChromeClient / Multiple Windows)</a>
+
+    <h3>2. Системные протоколы (Шемы)</h3>
+    <a href="tel:+79991112233">Позвонить (tel:)</a>
+    <a href="mailto:test@example.com">Написать письмо (mailto:)</a>
+    <a href="sms:+79991112233">Отправить SMS (sms:)</a>
+
+    <h3>4. Скачивание и Инструменты</h3>
+    <a href="https://w3.org" download>Скачать PDF-файл (Тест DownloadListener)</a>
+    <a href="#" onclick="alert('Тест JS Alert'); return false;">Вызвать JavaScript Alert</a>
+</body>
+</html>
